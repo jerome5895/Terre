@@ -5,7 +5,7 @@ import sys
 try:
     number = int(sys.argv[1])
 except ValueError:
-    print("Please enter a number.")
+    print("Please enter an integer.")
     sys.exit()
 except IndexError:
     print("Invalid input. No provided number.")
@@ -16,7 +16,7 @@ if len(sys.argv) > 2:
     print("Invalid input. Please provide only one integer.")
     sys.exit()
 
-# Loop to know if prime number
+# Program that displays if it is prime number
 if number > 1:
     for i in range(2, int(number/2)+1):
         if (number % i) == 0:
