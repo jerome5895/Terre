@@ -11,7 +11,7 @@ except IndexError:
     print("There is no input.")
     sys.exit()
 
-# Verify if even, odd or negative
+# Program that verify if argument is even, odd or negative
 if number % 2 == 0:
     print("even")
 else:
