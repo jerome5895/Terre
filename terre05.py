@@ -26,7 +26,7 @@ def remainder(a, b):
 if number_2 > number_1:
     print("Your divider is bigger than your dividend.")
 
-# Print out the result and the remainder
+# Program that print out the result and the remainder in argument
 print("The result is:", result(number_1, number_2))    
 print("The remainder is:", remainder(number_1, number_2))
 
