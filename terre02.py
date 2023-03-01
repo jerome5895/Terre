@@ -1,9 +1,9 @@
-# import module
+# Import module
 import sys
 
-# convert all arguments
-argument = sys.argv[::]
+# Extract all arguments
+argument = sys.argv[1:]
 
-# program that displays the arguments that its receives, line by line
+# Program that displays the arguments that its receives, line by line
 for arg in argument:
     print(arg)
