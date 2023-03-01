@@ -1,19 +1,17 @@
-# import module
+# Import module
 import sys
 
-# verify if input
-if len(sys.argv) < 2:
-    print("There is not input.")
-    sys.exit()
-
-# verify if number
+# Verify if number
 try:
     number = int(sys.argv[1])
 except ValueError:
     print("Invalid input. Please enter an Integer.")
     sys.exit()
+except IndexError:
+    print("There is no input.")
+    sys.exit()
 
-# verify if even, odd or negative
+# Verify if even, odd or negative
 if number % 2 == 0:
     print("even")
 else:
@@ -21,6 +19,9 @@ else:
 
 if number < 0:
     print("negative")
+
+
+
 
 
 
