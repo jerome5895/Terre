@@ -1,6 +1,5 @@
-# Path to the file
-Path = ["C", "Users", "Jerome", "Documents", "Terre", "Lessons", "terre01.1.py"]
+import sys
 
-# A program that displays the name of its file
-for title in Path[-1]:
-  print((title), end="")
+script_title = sys.argv[0]
+
+print(script_title)
