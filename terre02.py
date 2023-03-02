@@ -1,9 +1,9 @@
-# Import module
-import sys
+# Function that displays the arguments of the prompt, line by line
+def displays_argument():
+    import sys
+    argument = sys.argv[1:]
+    for arg in argument:
+        print(arg)
 
-# Extract all arguments
-argument = sys.argv[1:]
-
-# Program that displays the arguments that its receives, line by line
-for arg in argument:
-    print(arg)
+# Call function 'display_argument'
+displays_argument()
