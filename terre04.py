@@ -1,25 +1,36 @@
-# Import module
 import sys
 
-# Verify if number
-try:
-    number = int(sys.argv[1])
-except ValueError:
-    print("Invalid input. Please enter an Integer.")
-    sys.exit()
-except IndexError:
-    print("There is no input.")
-    sys.exit()
+# Function that try/except integer
+def try_except(integer):
+    try:
+        integer = int(integer)
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
+        sys.exit()
+    except IndexError:
+        print("There is not input.")
+        sys.exit()
+    return integer
 
-# Program that verify if argument is even, odd or negative
-if number % 2 == 0:
-    print("even")
-else:
-    print("odd")
+# Function that displays if even or odd
+def even_or_odd(integer):
+    if integer % 2 == 0:
+        print("even")
+    else:
+        print("odd")
+    if integer < 0:
+        print("negative")
 
-if number < 0:
-    print("negative")
+# Function that manage if more than one integer
+def len_integer():
+    if len(sys.argv) != 2:
+        print("Invalid input. Please provide only one integer.")
+        sys.exit()
 
+# Call three functions, to know if even or odd and manage errors
+len_integer()
+integer = try_except(sys.argv[1])
+even_or_odd(integer)
 
 
 
