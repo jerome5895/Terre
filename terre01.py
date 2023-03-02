@@ -1,8 +1,8 @@
-# Import module
-import sys
+# Function that returns the title of the script
+def print_title_of_script():
+    import sys
+    script_title = sys.argv[0]
+    print(script_title)
 
-# Extract title 
-script_title = sys.argv[0]
-
-# Program that displays its title 
-print(script_title)
+# Print title
+print_title_of_script()
