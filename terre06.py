@@ -1,19 +1,24 @@
-# Import module
 import sys
 
-# Test argument to manage Errors
-try:
-    string = sys.argv[1]
-except IndexError:
-    print("Invalid input. Please provide at least two characters.")
-    sys.exit()
+# Function to manage errors
+def try_except():
+    try:
+        string = sys.argv[1]
+        if len(string) < 2:
+            raise ValueError
+    except (IndexError, ValueError):
+        print("Invalid input. Please provide at least two characters.")
+        sys.exit(1)
+    return string
 
-reversed_string = ""
+# Function to reverse string
+def argument_reverse(string):
+    reversed_string = ""
+    for substring in string:
+        reversed_string = substring + reversed_string
+    return reversed_string
 
-# Get the argument upside down
-for substring in string:
-    reversed_string = substring + reversed_string
-
-# Program that displays the argument upside down
+# Assign variables
+string = try_except()
+reversed_string = argument_reverse(string)
 print(reversed_string)
-
