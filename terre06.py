@@ -18,7 +18,7 @@ def argument_reverse(string):
         reversed_string = substring + reversed_string
     return reversed_string
 
-# Assign variables
+# Assign variables and print out
 string = try_except()
 reversed_string = argument_reverse(string)
 print(reversed_string)
