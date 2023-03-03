@@ -31,9 +31,3 @@ def len_integer():
 len_integer()
 integer = try_except(sys.argv[1])
 even_or_odd(integer)
-
-
-
-
-
-
