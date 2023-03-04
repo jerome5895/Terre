@@ -1,34 +1,34 @@
-# Import module
 import sys
 
-# Manage Errors
-try:
-    number_1 = int(sys.argv[1])
-    number_2 = int(sys.argv[2])
-    number_3 = int(sys.argv[3])
-except ValueError:
-    print("Invalid input. Please provide three integers.")
-    sys.exit()
-except IndexError:
-    print("Invalid input. One integer at least is missing.")
-    sys.exit()
+# Function to manage errors
+def try_except():
+    if len(sys.argv) != 4:
+        print("Invalid input. One integer at least is missing.")
+        sys.exit()
+    nbr1, nbr2, nbr3 = sys.argv[1], sys.argv[2], sys.argv[3]
+    try:
+        nbr1 = int(nbr1)
+        nbr2 = int(nbr2)
+        nbr3 = int(nbr3)
+    except ValueError:
+        print("Invalid input. Please provide three integers.")
+        sys.exit()
+    return nbr1, nbr2, nbr3
 
-# Find the integer in the middle
-if number_1 < number_2 and number_1 > number_3:
-    print(number_1)
-if number_1 > number_2 and number_1 < number_3:
-    print(number_1)
+# Call function try_except
+nbr1, nbr2, nbr3 = try_except()
 
-if number_2 < number_1 and number_2 > number_3:
-    print(number_2)
-if number_2 > number_1 and number_2 < number_3:
-    print(number_2)
-
-if number_3 < number_1 and number_3 > number_2:
-    print(number_3)
-if number_3 > number_1 and number_3 < number_2:
-    print(number_3)
-
-# Error if all equal
-if number_1 == number_2 and number_1 == number_3:
-    print("The three integers are equal.")
+# Function to find the middle number
+def find_middle_nbr():
+    if nbr1 == nbr2 and nbr1 == nbr3:
+        print("The three integers are equal.")
+        sys.exit()
+    if nbr1 < nbr2 and nbr1 > nbr3 or nbr1 > nbr2 and nbr1 < nbr3:
+        print(nbr1)
+    elif nbr2 < nbr1 and nbr2 > nbr3 or nbr2 > nbr1 and nbr2 < nbr3:
+        print(nbr2)
+    else:
+        print(nbr3)
+    
+# Call function to print out the middle number
+find_middle_nbr()
