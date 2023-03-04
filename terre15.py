@@ -1,8 +1,18 @@
+# Edit my notes
 my_sentence = "J'ai terminé l'épreuve de la Terre. C'était souvent difficile:("
+my_green_points = ["Table ASCII", "Syntaxe", "Conditions", "Github"]
+my_less_green_points = ["Loop", "More developed algorithmics", "New functions"]
 
-my_green_points = "Table ASCII", "Syntaxe", "Conditions", "Github"
+# Convert notes to variables
+sentence = my_sentence
+right = my_green_points
+not_right = my_less_green_points
 
-my_less_green_points = "Loop", "More developed algorithmics", "New functions"
+# Function to print out my notes
+def print_out_feelings():
+    print(f"{sentence}") 
+    print(f"Mes facilités: {right[:]}")
+    print(f"Mes difficultés: {not_right[:]}")
 
-# Print out Terre over
-print("Super!", my_sentence, "Je garde cependant mon état d'esprit, je ne m'attendais pas à que ce soit facile.", "Mes points forts:", my_green_points, "Mes points faibles:", my_less_green_points)
+# Call function to print out my notes
+print_out_feelings()
